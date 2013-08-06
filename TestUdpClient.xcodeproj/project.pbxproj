@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		401F02B117B1A87900237D60 /* asdf.png in Resources */ = {isa = PBXBuildFile; fileRef = 401F02B017B1A87900237D60 /* asdf.png */; };
+		401F02B317B1A8CF00237D60 /* asdf2.png in Resources */ = {isa = PBXBuildFile; fileRef = 401F02B217B1A8CF00237D60 /* asdf2.png */; };
 		40877D0717B15B110094B557 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40877D0617B15B110094B557 /* UIKit.framework */; };
 		40877D0917B15B110094B557 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40877D0817B15B110094B557 /* Foundation.framework */; };
 		40877D0B17B15B110094B557 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40877D0A17B15B110094B557 /* CoreGraphics.framework */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		401F02B017B1A87900237D60 /* asdf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asdf.png; sourceTree = "<group>"; };
+		401F02B217B1A8CF00237D60 /* asdf2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asdf2.png; sourceTree = "<group>"; };
 		40877D0317B15B110094B557 /* TestUdpClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestUdpClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40877D0617B15B110094B557 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		40877D0817B15B110094B557 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,6 +67,8 @@
 		40877CFA17B15B110094B557 = {
 			isa = PBXGroup;
 			children = (
+				401F02B217B1A8CF00237D60 /* asdf2.png */,
+				401F02B017B1A87900237D60 /* asdf.png */,
 				40877D2A17B19F0E0094B557 /* SystemConfiguration.framework */,
 				40877D2817B19F000094B557 /* CFNetwork.framework */,
 				40877D2617B178E30094B557 /* CoreFoundation.framework */,
@@ -171,6 +177,8 @@
 				40877D1917B15B110094B557 /* Default.png in Resources */,
 				40877D1B17B15B110094B557 /* Default@2x.png in Resources */,
 				40877D1D17B15B110094B557 /* Default-568h@2x.png in Resources */,
+				401F02B117B1A87900237D60 /* asdf.png in Resources */,
+				401F02B317B1A8CF00237D60 /* asdf2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +308,7 @@
 				40877D2217B15B110094B557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

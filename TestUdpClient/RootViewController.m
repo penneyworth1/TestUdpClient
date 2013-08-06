@@ -49,19 +49,41 @@
     int socketInt = CFSocketGetNative(socketRef); //CFSocketCreate(kCFAllocatorDefault, PF_INET, SOCK_DGRAM, IPPROTO_UDP, kCFSocketNoCallBack, NULL, NULL);
     if(socketInt >= 0)
     {
-        NSLog(@"socket initialized");
+        //NSLog(@"socket initialized");
         
         struct sockaddr_in destination;
         memset(&destination, 0, sizeof(struct sockaddr_in));
         destination.sin_len = sizeof(struct sockaddr_in);
         destination.sin_family = AF_INET;
         
-        NSString *ip = @"localhost";
+        NSString *ip = @"38.98.173.2";
         destination.sin_addr.s_addr = inet_addr([ip UTF8String]);
-        destination.sin_port = htons(33033); //port
+        destination.sin_port = htons(58642); //port
+        
+        char messageCharArray[]= "helloworld from iphone ^_^";
+        CFDataRef Data = CFDataCreate(NULL, (const UInt8*)messageCharArray, sizeof(messageCharArray));
+        
+        //CFSocketSetAddress(socketRef, CFDataCreate(NULL, (const UInt8*)&destination, sizeof(destination)));
+        CFSocketSendData(socketRef, CFDataCreate(NULL, (const UInt8*)&destination, sizeof(destination)), Data, 10);
+    
+        CFRelease(Data);
+        
+        
+        
+        //try to receive
+        int                     err;
+        struct sockaddr_storage addr;
+        socklen_t               addrLen;
+        uint8_t                 buffer[1024];
+        ssize_t                 bytesRead;
+        
+        addrLen = sizeof(addr);
+        bytesRead = recvfrom(socketInt, buffer, sizeof(buffer), 0, (struct sockaddr *) &addr, &addrLen);
+        err = 1;
+        
     }
     
-    
+    CFRelease(socketRef);
 }
 
 - (void)didReceiveMemoryWarning
